@@ -1,0 +1,1238 @@
+May 11, 2020 8:15:10 PM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory register
+INFO: Registering org.apache.hadoop.yarn.server.resourcemanager.webapp.JAXBContextResolver as a provider class
+May 11, 2020 8:15:10 PM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory register
+INFO: Registering org.apache.hadoop.yarn.server.resourcemanager.webapp.RMWebServices as a root resource class
+May 11, 2020 8:15:10 PM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory register
+INFO: Registering org.apache.hadoop.yarn.webapp.GenericExceptionHandler as a provider class
+May 11, 2020 8:15:10 PM com.sun.jersey.server.impl.application.WebApplicationImpl _initiate
+INFO: Initiating Jersey application, version 'Jersey: 1.9 09/02/2011 11:17 AM'
+May 11, 2020 8:15:10 PM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory getComponentProvider
+INFO: Binding org.apache.hadoop.yarn.server.resourcemanager.webapp.JAXBContextResolver to GuiceManagedComponentProvider with the scope "Singleton"
+May 11, 2020 8:15:11 PM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory getComponentProvider
+INFO: Binding org.apache.hadoop.yarn.webapp.GenericExceptionHandler to GuiceManagedComponentProvider with the scope "Singleton"
+May 11, 2020 8:15:12 PM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory getComponentProvider
+INFO: Binding org.apache.hadoop.yarn.server.resourcemanager.webapp.RMWebServices to GuiceManagedComponentProvider with the scope "Singleton"
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator buildModelAndSchemas
+SEVERE: Failed to generate the schema for the JAX-B elements
+com.sun.xml.bind.v2.runtime.IllegalAnnotationsException: 1 counts of IllegalAnnotationExceptions
+Two classes have the same XML type name "appAttemptInfo". Use @XmlType.name and @XmlType.namespace to assign different names to them.
+	this problem is related to the following location:
+		at org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppAttemptInfo
+		at protected java.util.ArrayList org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppAttemptsInfo.attempt
+		at org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppAttemptsInfo
+	this problem is related to the following location:
+		at org.apache.hadoop.yarn.server.webapp.dao.AppAttemptInfo
+
+	at com.sun.xml.bind.v2.runtime.IllegalAnnotationsException$Builder.check(IllegalAnnotationsException.java:106)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.getTypeInfoSet(JAXBContextImpl.java:489)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.<init>(JAXBContextImpl.java:319)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl$JAXBContextBuilder.build(JAXBContextImpl.java:1170)
+	at com.sun.xml.bind.v2.ContextFactory.createContext(ContextFactory.java:145)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:247)
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:234)
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:441)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:641)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:584)
+	at com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator.buildModelAndSchemas(WadlGeneratorJAXBGrammarGenerator.java:412)
+	at com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator.createExternalGrammar(WadlGeneratorJAXBGrammarGenerator.java:352)
+	at com.sun.jersey.server.wadl.WadlBuilder.generate(WadlBuilder.java:115)
+	at com.sun.jersey.server.impl.wadl.WadlApplicationContextImpl.getApplication(WadlApplicationContextImpl.java:104)
+	at com.sun.jersey.server.impl.wadl.WadlApplicationContextImpl.getApplication(WadlApplicationContextImpl.java:120)
+	at com.sun.jersey.server.impl.wadl.WadlMethodFactory$WadlOptionsMethodDispatcher.dispatch(WadlMethodFactory.java:98)
+	at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:288)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.ResourceClassRule.accept(ResourceClassRule.java:108)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:84)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1469)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1400)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1349)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1339)
+	at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:416)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:537)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.doFilter(ServletContainer.java:886)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.doFilter(ServletContainer.java:834)
+	at org.apache.hadoop.yarn.server.resourcemanager.webapp.RMWebAppFilter.doFilter(RMWebAppFilter.java:178)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.doFilter(ServletContainer.java:795)
+	at com.google.inject.servlet.FilterDefinition.doFilter(FilterDefinition.java:163)
+	at com.google.inject.servlet.FilterChainInvocation.doFilter(FilterChainInvocation.java:58)
+	at com.google.inject.servlet.ManagedFilterPipeline.dispatch(ManagedFilterPipeline.java:118)
+	at com.google.inject.servlet.GuiceFilter.doFilter(GuiceFilter.java:113)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.apache.hadoop.security.http.XFrameOptionsFilter.doFilter(XFrameOptionsFilter.java:57)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter.doFilter(StaticUserWebFilter.java:110)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.apache.hadoop.security.authentication.server.AuthenticationFilter.doFilter(AuthenticationFilter.java:644)
+	at org.apache.hadoop.security.token.delegation.web.DelegationTokenAuthenticationFilter.doFilter(DelegationTokenAuthenticationFilter.java:304)
+	at org.apache.hadoop.security.authentication.server.AuthenticationFilter.doFilter(AuthenticationFilter.java:592)
+	at org.apache.hadoop.yarn.server.security.http.RMAuthenticationFilter.doFilter(RMAuthenticationFilter.java:82)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.apache.hadoop.http.HttpServer2$QuotingInputFilter.doFilter(HttpServer2.java:1429)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.apache.hadoop.http.NoCacheFilter.doFilter(NoCacheFilter.java:45)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.apache.hadoop.http.NoCacheFilter.doFilter(NoCacheFilter.java:45)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:399)
+	at org.mortbay.jetty.security.SecurityHandler.handle(SecurityHandler.java:216)
+	at org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:182)
+	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:766)
+	at org.mortbay.jetty.webapp.WebAppContext.handle(WebAppContext.java:450)
+	at org.mortbay.jetty.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:230)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at org.mortbay.jetty.Server.handle(Server.java:326)
+	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:542)
+	at org.mortbay.jetty.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:928)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:549)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:212)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:404)
+	at org.mortbay.io.nio.SelectChannelEndPoint.run(SelectChannelEndPoint.java:410)
+	at org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:582)
+
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ClusterInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ClusterInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ApplicationSubmissionContextInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ApplicationSubmissionContextInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.webapp.dao.ContainersInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.webapp.dao.ContainersInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ReservationSubmissionRequestInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ReservationSubmissionRequestInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ReservationUpdateRequestInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ReservationUpdateRequestInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ReservationDeleteRequestInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ReservationDeleteRequestInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.NodeToLabelsInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.NodeToLabelsInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.LabelsToNodesInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.LabelsToNodesInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.NodeLabelsInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.NodeLabelsInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppPriority
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppPriority
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.NodesInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.NodesInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppAttemptsInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppAttemptsInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.webapp.dao.ContainerInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.webapp.dao.ContainerInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppTimeoutInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppTimeoutInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.NodeLabelsInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.NodeLabelsInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.NodeLabelsInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppState
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppState
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.webapp.dao.AppAttemptInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.webapp.dao.AppAttemptInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ClusterInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ClusterInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ClusterMetricsInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ClusterMetricsInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.SchedulerTypeInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.SchedulerTypeInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class java.lang.String
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class java.lang.String
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppsInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppsInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ActivitiesInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ActivitiesInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppActivitiesInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppActivitiesInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ApplicationStatisticsInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ApplicationStatisticsInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppState
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppState
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.NodeToLabelsEntryList
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppPriority
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppPriority
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppQueue
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppQueue
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppQueue
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppQueue
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.DelegationToken
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.DelegationToken
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppTimeoutInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppTimeoutInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppTimeoutsInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppTimeoutsInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.webapp.dao.SchedConfUpdateInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.webapp.dao.SchedConfUpdateInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.NodeInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.NodeInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator buildModelAndSchemas
+SEVERE: Failed to generate the schema for the JAX-B elements
+com.sun.xml.bind.v2.runtime.IllegalAnnotationsException: 1 counts of IllegalAnnotationExceptions
+Two classes have the same XML type name "appAttemptInfo". Use @XmlType.name and @XmlType.namespace to assign different names to them.
+	this problem is related to the following location:
+		at org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppAttemptInfo
+		at protected java.util.ArrayList org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppAttemptsInfo.attempt
+		at org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppAttemptsInfo
+	this problem is related to the following location:
+		at org.apache.hadoop.yarn.server.webapp.dao.AppAttemptInfo
+
+	at com.sun.xml.bind.v2.runtime.IllegalAnnotationsException$Builder.check(IllegalAnnotationsException.java:106)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.getTypeInfoSet(JAXBContextImpl.java:489)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.<init>(JAXBContextImpl.java:319)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl$JAXBContextBuilder.build(JAXBContextImpl.java:1170)
+	at com.sun.xml.bind.v2.ContextFactory.createContext(ContextFactory.java:145)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:247)
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:234)
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:441)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:641)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:584)
+	at com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator.buildModelAndSchemas(WadlGeneratorJAXBGrammarGenerator.java:412)
+	at com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator.createExternalGrammar(WadlGeneratorJAXBGrammarGenerator.java:352)
+	at com.sun.jersey.server.wadl.WadlBuilder.generate(WadlBuilder.java:115)
+	at com.sun.jersey.server.impl.wadl.WadlApplicationContextImpl.getApplication(WadlApplicationContextImpl.java:104)
+	at com.sun.jersey.server.impl.wadl.WadlApplicationContextImpl.getApplication(WadlApplicationContextImpl.java:120)
+	at com.sun.jersey.server.impl.wadl.WadlMethodFactory$WadlOptionsMethodDispatcher.dispatch(WadlMethodFactory.java:98)
+	at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:288)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.ResourceClassRule.accept(ResourceClassRule.java:108)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:84)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1469)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1400)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1349)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1339)
+	at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:416)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:537)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.doFilter(ServletContainer.java:886)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.doFilter(ServletContainer.java:834)
+	at org.apache.hadoop.yarn.server.resourcemanager.webapp.RMWebAppFilter.doFilter(RMWebAppFilter.java:178)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.doFilter(ServletContainer.java:795)
+	at com.google.inject.servlet.FilterDefinition.doFilter(FilterDefinition.java:163)
+	at com.google.inject.servlet.FilterChainInvocation.doFilter(FilterChainInvocation.java:58)
+	at com.google.inject.servlet.ManagedFilterPipeline.dispatch(ManagedFilterPipeline.java:118)
+	at com.google.inject.servlet.GuiceFilter.doFilter(GuiceFilter.java:113)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.apache.hadoop.security.http.XFrameOptionsFilter.doFilter(XFrameOptionsFilter.java:57)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter.doFilter(StaticUserWebFilter.java:97)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.apache.hadoop.security.authentication.server.AuthenticationFilter.doFilter(AuthenticationFilter.java:644)
+	at org.apache.hadoop.security.token.delegation.web.DelegationTokenAuthenticationFilter.doFilter(DelegationTokenAuthenticationFilter.java:304)
+	at org.apache.hadoop.security.authentication.server.AuthenticationFilter.doFilter(AuthenticationFilter.java:592)
+	at org.apache.hadoop.yarn.server.security.http.RMAuthenticationFilter.doFilter(RMAuthenticationFilter.java:82)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.apache.hadoop.http.HttpServer2$QuotingInputFilter.doFilter(HttpServer2.java:1429)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.apache.hadoop.http.NoCacheFilter.doFilter(NoCacheFilter.java:45)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.apache.hadoop.http.NoCacheFilter.doFilter(NoCacheFilter.java:45)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:399)
+	at org.mortbay.jetty.security.SecurityHandler.handle(SecurityHandler.java:216)
+	at org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:182)
+	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:766)
+	at org.mortbay.jetty.webapp.WebAppContext.handle(WebAppContext.java:450)
+	at org.mortbay.jetty.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:230)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at org.mortbay.jetty.Server.handle(Server.java:326)
+	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:542)
+	at org.mortbay.jetty.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:928)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:549)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:212)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:404)
+	at org.mortbay.io.nio.SelectChannelEndPoint.run(SelectChannelEndPoint.java:410)
+	at org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:582)
+
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ClusterInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ClusterInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ApplicationSubmissionContextInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ApplicationSubmissionContextInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.webapp.dao.ContainersInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.webapp.dao.ContainersInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ReservationSubmissionRequestInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ReservationSubmissionRequestInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ReservationUpdateRequestInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ReservationUpdateRequestInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ReservationDeleteRequestInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ReservationDeleteRequestInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.NodeToLabelsInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.NodeToLabelsInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.LabelsToNodesInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.LabelsToNodesInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.NodeLabelsInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.NodeLabelsInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppPriority
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppPriority
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.NodesInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.NodesInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppAttemptsInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppAttemptsInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.webapp.dao.ContainerInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.webapp.dao.ContainerInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppTimeoutInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppTimeoutInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.NodeLabelsInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.NodeLabelsInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.NodeLabelsInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppState
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppState
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.webapp.dao.AppAttemptInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.webapp.dao.AppAttemptInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ClusterInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ClusterInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ClusterMetricsInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ClusterMetricsInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.SchedulerTypeInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.SchedulerTypeInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class java.lang.String
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class java.lang.String
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppsInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppsInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ActivitiesInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ActivitiesInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppActivitiesInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppActivitiesInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ApplicationStatisticsInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ApplicationStatisticsInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppState
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppState
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.NodeToLabelsEntryList
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppPriority
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppPriority
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppQueue
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppQueue
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppQueue
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppQueue
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.DelegationToken
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.DelegationToken
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppTimeoutInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppTimeoutInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppTimeoutsInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppTimeoutsInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.webapp.dao.SchedConfUpdateInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.webapp.dao.SchedConfUpdateInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.NodeInfo
+May 11, 2020 10:26:47 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.NodeInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator buildModelAndSchemas
+SEVERE: Failed to generate the schema for the JAX-B elements
+com.sun.xml.bind.v2.runtime.IllegalAnnotationsException: 1 counts of IllegalAnnotationExceptions
+Two classes have the same XML type name "appAttemptInfo". Use @XmlType.name and @XmlType.namespace to assign different names to them.
+	this problem is related to the following location:
+		at org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppAttemptInfo
+		at protected java.util.ArrayList org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppAttemptsInfo.attempt
+		at org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppAttemptsInfo
+	this problem is related to the following location:
+		at org.apache.hadoop.yarn.server.webapp.dao.AppAttemptInfo
+
+	at com.sun.xml.bind.v2.runtime.IllegalAnnotationsException$Builder.check(IllegalAnnotationsException.java:106)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.getTypeInfoSet(JAXBContextImpl.java:489)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.<init>(JAXBContextImpl.java:319)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl$JAXBContextBuilder.build(JAXBContextImpl.java:1170)
+	at com.sun.xml.bind.v2.ContextFactory.createContext(ContextFactory.java:145)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:247)
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:234)
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:441)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:641)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:584)
+	at com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator.buildModelAndSchemas(WadlGeneratorJAXBGrammarGenerator.java:412)
+	at com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator.createExternalGrammar(WadlGeneratorJAXBGrammarGenerator.java:352)
+	at com.sun.jersey.server.wadl.WadlBuilder.generate(WadlBuilder.java:115)
+	at com.sun.jersey.server.impl.wadl.WadlApplicationContextImpl.getApplication(WadlApplicationContextImpl.java:104)
+	at com.sun.jersey.server.impl.wadl.WadlApplicationContextImpl.getApplication(WadlApplicationContextImpl.java:120)
+	at com.sun.jersey.server.impl.wadl.WadlMethodFactory$WadlOptionsMethodDispatcher.dispatch(WadlMethodFactory.java:98)
+	at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:288)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.ResourceClassRule.accept(ResourceClassRule.java:108)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:84)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1469)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1400)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1349)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1339)
+	at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:416)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:537)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.doFilter(ServletContainer.java:886)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.doFilter(ServletContainer.java:834)
+	at org.apache.hadoop.yarn.server.resourcemanager.webapp.RMWebAppFilter.doFilter(RMWebAppFilter.java:178)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.doFilter(ServletContainer.java:795)
+	at com.google.inject.servlet.FilterDefinition.doFilter(FilterDefinition.java:163)
+	at com.google.inject.servlet.FilterChainInvocation.doFilter(FilterChainInvocation.java:58)
+	at com.google.inject.servlet.ManagedFilterPipeline.dispatch(ManagedFilterPipeline.java:118)
+	at com.google.inject.servlet.GuiceFilter.doFilter(GuiceFilter.java:113)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.apache.hadoop.security.http.XFrameOptionsFilter.doFilter(XFrameOptionsFilter.java:57)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter.doFilter(StaticUserWebFilter.java:110)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.apache.hadoop.security.authentication.server.AuthenticationFilter.doFilter(AuthenticationFilter.java:644)
+	at org.apache.hadoop.security.token.delegation.web.DelegationTokenAuthenticationFilter.doFilter(DelegationTokenAuthenticationFilter.java:304)
+	at org.apache.hadoop.security.authentication.server.AuthenticationFilter.doFilter(AuthenticationFilter.java:592)
+	at org.apache.hadoop.yarn.server.security.http.RMAuthenticationFilter.doFilter(RMAuthenticationFilter.java:82)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.apache.hadoop.http.HttpServer2$QuotingInputFilter.doFilter(HttpServer2.java:1429)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.apache.hadoop.http.NoCacheFilter.doFilter(NoCacheFilter.java:45)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.apache.hadoop.http.NoCacheFilter.doFilter(NoCacheFilter.java:45)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:399)
+	at org.mortbay.jetty.security.SecurityHandler.handle(SecurityHandler.java:216)
+	at org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:182)
+	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:766)
+	at org.mortbay.jetty.webapp.WebAppContext.handle(WebAppContext.java:450)
+	at org.mortbay.jetty.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:230)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at org.mortbay.jetty.Server.handle(Server.java:326)
+	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:542)
+	at org.mortbay.jetty.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:928)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:549)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:212)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:404)
+	at org.mortbay.io.nio.SelectChannelEndPoint.run(SelectChannelEndPoint.java:410)
+	at org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:582)
+
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ClusterInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ClusterInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ApplicationSubmissionContextInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ApplicationSubmissionContextInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.webapp.dao.ContainersInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.webapp.dao.ContainersInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ReservationSubmissionRequestInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ReservationSubmissionRequestInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ReservationUpdateRequestInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ReservationUpdateRequestInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ReservationDeleteRequestInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ReservationDeleteRequestInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.NodeToLabelsInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.NodeToLabelsInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.LabelsToNodesInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.LabelsToNodesInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.NodeLabelsInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.NodeLabelsInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppPriority
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppPriority
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.NodesInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.NodesInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppAttemptsInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppAttemptsInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.webapp.dao.ContainerInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.webapp.dao.ContainerInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppTimeoutInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppTimeoutInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.NodeLabelsInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.NodeLabelsInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.NodeLabelsInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppState
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppState
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.webapp.dao.AppAttemptInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.webapp.dao.AppAttemptInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ClusterInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ClusterInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ClusterMetricsInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ClusterMetricsInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.SchedulerTypeInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.SchedulerTypeInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class java.lang.String
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class java.lang.String
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppsInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppsInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ActivitiesInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ActivitiesInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppActivitiesInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppActivitiesInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ApplicationStatisticsInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ApplicationStatisticsInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppState
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppState
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.NodeToLabelsEntryList
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppPriority
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppPriority
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppQueue
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppQueue
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppQueue
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppQueue
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.DelegationToken
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.DelegationToken
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppTimeoutInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppTimeoutInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppTimeoutsInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppTimeoutsInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.webapp.dao.SchedConfUpdateInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.webapp.dao.SchedConfUpdateInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.NodeInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.NodeInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator buildModelAndSchemas
+SEVERE: Failed to generate the schema for the JAX-B elements
+com.sun.xml.bind.v2.runtime.IllegalAnnotationsException: 1 counts of IllegalAnnotationExceptions
+Two classes have the same XML type name "appAttemptInfo". Use @XmlType.name and @XmlType.namespace to assign different names to them.
+	this problem is related to the following location:
+		at org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppAttemptInfo
+		at protected java.util.ArrayList org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppAttemptsInfo.attempt
+		at org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppAttemptsInfo
+	this problem is related to the following location:
+		at org.apache.hadoop.yarn.server.webapp.dao.AppAttemptInfo
+
+	at com.sun.xml.bind.v2.runtime.IllegalAnnotationsException$Builder.check(IllegalAnnotationsException.java:106)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.getTypeInfoSet(JAXBContextImpl.java:489)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl.<init>(JAXBContextImpl.java:319)
+	at com.sun.xml.bind.v2.runtime.JAXBContextImpl$JAXBContextBuilder.build(JAXBContextImpl.java:1170)
+	at com.sun.xml.bind.v2.ContextFactory.createContext(ContextFactory.java:145)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:247)
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:234)
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:441)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:641)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:584)
+	at com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator.buildModelAndSchemas(WadlGeneratorJAXBGrammarGenerator.java:412)
+	at com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator.createExternalGrammar(WadlGeneratorJAXBGrammarGenerator.java:352)
+	at com.sun.jersey.server.wadl.WadlBuilder.generate(WadlBuilder.java:115)
+	at com.sun.jersey.server.impl.wadl.WadlApplicationContextImpl.getApplication(WadlApplicationContextImpl.java:104)
+	at com.sun.jersey.server.impl.wadl.WadlApplicationContextImpl.getApplication(WadlApplicationContextImpl.java:120)
+	at com.sun.jersey.server.impl.wadl.WadlMethodFactory$WadlOptionsMethodDispatcher.dispatch(WadlMethodFactory.java:98)
+	at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:288)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.ResourceClassRule.accept(ResourceClassRule.java:108)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:84)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1469)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1400)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1349)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1339)
+	at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:416)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:537)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.doFilter(ServletContainer.java:886)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.doFilter(ServletContainer.java:834)
+	at org.apache.hadoop.yarn.server.resourcemanager.webapp.RMWebAppFilter.doFilter(RMWebAppFilter.java:178)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.doFilter(ServletContainer.java:795)
+	at com.google.inject.servlet.FilterDefinition.doFilter(FilterDefinition.java:163)
+	at com.google.inject.servlet.FilterChainInvocation.doFilter(FilterChainInvocation.java:58)
+	at com.google.inject.servlet.ManagedFilterPipeline.dispatch(ManagedFilterPipeline.java:118)
+	at com.google.inject.servlet.GuiceFilter.doFilter(GuiceFilter.java:113)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.apache.hadoop.security.http.XFrameOptionsFilter.doFilter(XFrameOptionsFilter.java:57)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter.doFilter(StaticUserWebFilter.java:97)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.apache.hadoop.security.authentication.server.AuthenticationFilter.doFilter(AuthenticationFilter.java:644)
+	at org.apache.hadoop.security.token.delegation.web.DelegationTokenAuthenticationFilter.doFilter(DelegationTokenAuthenticationFilter.java:304)
+	at org.apache.hadoop.security.authentication.server.AuthenticationFilter.doFilter(AuthenticationFilter.java:592)
+	at org.apache.hadoop.yarn.server.security.http.RMAuthenticationFilter.doFilter(RMAuthenticationFilter.java:82)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.apache.hadoop.http.HttpServer2$QuotingInputFilter.doFilter(HttpServer2.java:1429)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.apache.hadoop.http.NoCacheFilter.doFilter(NoCacheFilter.java:45)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.apache.hadoop.http.NoCacheFilter.doFilter(NoCacheFilter.java:45)
+	at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1212)
+	at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:399)
+	at org.mortbay.jetty.security.SecurityHandler.handle(SecurityHandler.java:216)
+	at org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:182)
+	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:766)
+	at org.mortbay.jetty.webapp.WebAppContext.handle(WebAppContext.java:450)
+	at org.mortbay.jetty.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:230)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at org.mortbay.jetty.Server.handle(Server.java:326)
+	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:542)
+	at org.mortbay.jetty.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:928)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:549)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:212)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:404)
+	at org.mortbay.io.nio.SelectChannelEndPoint.run(SelectChannelEndPoint.java:410)
+	at org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:582)
+
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ClusterInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ClusterInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ApplicationSubmissionContextInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ApplicationSubmissionContextInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.webapp.dao.ContainersInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.webapp.dao.ContainersInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ReservationSubmissionRequestInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ReservationSubmissionRequestInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ReservationUpdateRequestInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ReservationUpdateRequestInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ReservationDeleteRequestInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ReservationDeleteRequestInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.NodeToLabelsInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.NodeToLabelsInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.LabelsToNodesInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.LabelsToNodesInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.NodeLabelsInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.NodeLabelsInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppPriority
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppPriority
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.NodesInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.NodesInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppAttemptsInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppAttemptsInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.webapp.dao.ContainerInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.webapp.dao.ContainerInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppTimeoutInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppTimeoutInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.NodeLabelsInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.NodeLabelsInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.NodeLabelsInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppState
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppState
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.webapp.dao.AppAttemptInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.webapp.dao.AppAttemptInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ClusterInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ClusterInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ClusterMetricsInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ClusterMetricsInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.SchedulerTypeInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.SchedulerTypeInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class java.lang.String
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class java.lang.String
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppsInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppsInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ActivitiesInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ActivitiesInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppActivitiesInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppActivitiesInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ApplicationStatisticsInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.ApplicationStatisticsInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppState
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppState
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.NodeToLabelsEntryList
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppPriority
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppPriority
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppQueue
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppQueue
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppQueue
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppQueue
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.DelegationToken
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.DelegationToken
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppTimeoutInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppTimeoutInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppTimeoutsInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.AppTimeoutsInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.webapp.dao.SchedConfUpdateInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.webapp.dao.SchedConfUpdateInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class javax.ws.rs.core.Response
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.NodeInfo
+May 11, 2020 10:28:08 PM com.sun.jersey.server.wadl.generators.WadlGeneratorJAXBGrammarGenerator attachTypes
+INFO: Couldn't find JAX-B element for class org.apache.hadoop.yarn.server.resourcemanager.webapp.dao.NodeInfo
