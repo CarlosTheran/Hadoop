@@ -1,3 +1,6 @@
+This files is for the masternode
+
+
 For the latest information about Hadoop, please visit our website at:
 
    http://hadoop.apache.org/core/
